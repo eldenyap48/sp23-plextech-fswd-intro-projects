@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="description" content="Free Web tutorials for HTML and CSS">
-        <meta name="author" content="John Doe">
-        <title>A Meaningful Page Title</title>
+        <meta name="description" content="Free Web tutorials for HTML and CSS with Elden">
+        <meta name="author" content="Elden Yap">
+        <title>Elden's HTML and CSS Page</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="activity.css" />
     </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event){
+
+            document.querySelectorAll(".btn").forEach((e) => {
+                e.addEventListener('click', (event) => {
+                    var color = e.dataset.color;
+                    document.body.style.backgroundColor = color;
+
+                    document.querySelectorAll("div").forEach((item) => {
+                        item.style.color = e.dataset.complementary;
+                    });
+                });
+            });
+        });
+    </script>
     <body>
-        
+        <div id="header">
+            <h1>SOME FUNNY HEADER</h1>
+            <div id="btn_holder">
+                <button class="btn" id="light" data-color="white" data-complementary="black">Light</button>
+                <button class="btn" id="dark" data-color="black" data-complementary="white">Dark</button>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="sidebar">
+                Some stuff
+            </div>
+            <div id="main_body">
+                Hello
+            </div>
+        </div>
+        <div id="footer">This is a footer</div>
     </body>
 </html>

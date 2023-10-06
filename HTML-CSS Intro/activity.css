@@ -1,0 +1,45 @@
+#header {
+    width: 100%;
+    align-items: center;
+    padding: 2%;
+    margin: 2px;
+}
+
+#header > h1 {
+    text-align: center;
+    margin: 2px;
+}
+
+#middle {
+    display:inline-flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 2px;
+    height: 200px;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 1%;
+}
+
+#main_body {
+    flex: 3;
+    padding: 1%;
+}
+
+#footer {
+    width: 100%;
+    margin: 2px;
+    padding: 1%;
+}
+
+#btn_holder {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 10px;
+}
